@@ -4,84 +4,84 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import seedu.address.logic.commands.EditCommand.EditPersonDescriptor;
-import seedu.address.model.person.Address;
-import seedu.address.model.person.Email;
-import seedu.address.model.person.Name;
-import seedu.address.model.person.Person;
-import seedu.address.model.person.Phone;
+import seedu.address.logic.commands.EditCommand.EditstudentDescriptor;
+import seedu.address.model.student.Address;
+import seedu.address.model.student.Email;
+import seedu.address.model.student.Name;
+import seedu.address.model.student.student;
+import seedu.address.model.student.Phone;
 import seedu.address.model.tag.Tag;
 
 /**
- * A utility class to help with building EditPersonDescriptor objects.
+ * A utility class to help with building EditstudentDescriptor objects.
  */
-public class EditPersonDescriptorBuilder {
+public class EditstudentDescriptorBuilder {
 
-    private EditPersonDescriptor descriptor;
+    private EditstudentDescriptor descriptor;
 
-    public EditPersonDescriptorBuilder() {
-        descriptor = new EditPersonDescriptor();
+    public EditstudentDescriptorBuilder() {
+        descriptor = new EditstudentDescriptor();
     }
 
-    public EditPersonDescriptorBuilder(EditPersonDescriptor descriptor) {
-        this.descriptor = new EditPersonDescriptor(descriptor);
-    }
-
-    /**
-     * Returns an {@code EditPersonDescriptor} with fields containing {@code person}'s details
-     */
-    public EditPersonDescriptorBuilder(Person person) {
-        descriptor = new EditPersonDescriptor();
-        descriptor.setName(person.getName());
-        descriptor.setPhone(person.getPhone());
-        descriptor.setEmail(person.getEmail());
-        descriptor.setAddress(person.getAddress());
-        descriptor.setTags(person.getTags());
+    public EditstudentDescriptorBuilder(EditstudentDescriptor descriptor) {
+        this.descriptor = new EditstudentDescriptor(descriptor);
     }
 
     /**
-     * Sets the {@code Name} of the {@code EditPersonDescriptor} that we are building.
+     * Returns an {@code EditstudentDescriptor} with fields containing {@code student}'s details
      */
-    public EditPersonDescriptorBuilder withName(String name) {
+    public EditstudentDescriptorBuilder(student student) {
+        descriptor = new EditstudentDescriptor();
+        descriptor.setName(student.getName());
+        descriptor.setPhone(student.getPhone());
+        descriptor.setEmail(student.getEmail());
+        descriptor.setAddress(student.getAddress());
+        descriptor.setTags(student.getTags());
+    }
+
+    /**
+     * Sets the {@code Name} of the {@code EditstudentDescriptor} that we are building.
+     */
+    public EditstudentDescriptorBuilder withName(String name) {
         descriptor.setName(new Name(name));
         return this;
     }
 
     /**
-     * Sets the {@code Phone} of the {@code EditPersonDescriptor} that we are building.
+     * Sets the {@code Phone} of the {@code EditstudentDescriptor} that we are building.
      */
-    public EditPersonDescriptorBuilder withPhone(String phone) {
+    public EditstudentDescriptorBuilder withPhone(String phone) {
         descriptor.setPhone(new Phone(phone));
         return this;
     }
 
     /**
-     * Sets the {@code Email} of the {@code EditPersonDescriptor} that we are building.
+     * Sets the {@code Email} of the {@code EditstudentDescriptor} that we are building.
      */
-    public EditPersonDescriptorBuilder withEmail(String email) {
+    public EditstudentDescriptorBuilder withEmail(String email) {
         descriptor.setEmail(new Email(email));
         return this;
     }
 
     /**
-     * Sets the {@code Address} of the {@code EditPersonDescriptor} that we are building.
+     * Sets the {@code Address} of the {@code EditstudentDescriptor} that we are building.
      */
-    public EditPersonDescriptorBuilder withAddress(String address) {
+    public EditstudentDescriptorBuilder withAddress(String address) {
         descriptor.setAddress(new Address(address));
         return this;
     }
 
     /**
-     * Parses the {@code tags} into a {@code Set<Tag>} and set it to the {@code EditPersonDescriptor}
+     * Parses the {@code tags} into a {@code Set<Tag>} and set it to the {@code EditstudentDescriptor}
      * that we are building.
      */
-    public EditPersonDescriptorBuilder withTags(String... tags) {
+    public EditstudentDescriptorBuilder withTags(String... tags) {
         Set<Tag> tagSet = Stream.of(tags).map(Tag::new).collect(Collectors.toSet());
         descriptor.setTags(tagSet);
         return this;
     }
 
-    public EditPersonDescriptor build() {
+    public EditstudentDescriptor build() {
         return descriptor;
     }
 }
