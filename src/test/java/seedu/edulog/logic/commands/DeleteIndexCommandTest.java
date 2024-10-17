@@ -9,7 +9,9 @@ import static seedu.edulog.logic.commands.CommandTestUtil.showStudentAtIndex;
 import static seedu.edulog.testutil.TypicalIndexes.INDEX_FIRST_STUDENT;
 import static seedu.edulog.testutil.TypicalIndexes.INDEX_SECOND_STUDENT;
 import static seedu.edulog.testutil.TypicalStudents.getTypicalEduLog;
+
 import org.junit.jupiter.api.Test;
+
 import seedu.edulog.commons.core.index.Index;
 import seedu.edulog.logic.Messages;
 import seedu.edulog.model.Model;

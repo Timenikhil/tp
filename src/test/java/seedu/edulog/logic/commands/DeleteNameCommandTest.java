@@ -81,7 +81,7 @@ public class DeleteNameCommandTest {
 
         DeleteCommand deleteCommand = new DeleteNameCommand(unFilteredStudent);
 
-        assertCommandFailure(deleteCommand, model, Messages.MESSAGE_INVALID_STUDENT_DISPLAYED_INDEX);
+        assertCommandFailure(deleteCommand, model, Messages.MESSAGE_INVALID_STUDENT_DISPLAYED_NAME);
     }
 
     @Test
