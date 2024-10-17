@@ -18,6 +18,7 @@ import seedu.edulog.model.Model;
 import seedu.edulog.model.ModelManager;
 import seedu.edulog.model.UserPrefs;
 import seedu.edulog.model.calendar.EdulogCalendar;
+import seedu.edulog.model.student.Name;
 import seedu.edulog.model.student.Student;
 
 /**
@@ -103,10 +104,18 @@ public class DeleteIndexCommandTest {
     }
 
     @Test
-    public void toStringMethod() {
+    public void toStringMethodDeleteIndex() {
         Index targetIndex = Index.fromOneBased(1);
-        DeleteCommand deleteCommand = new DeleteIndexCommand(targetIndex);
-        String expected = DeleteCommand.class.getCanonicalName() + "{targetIndex=" + targetIndex + "}";
+        DeleteIndexCommand deleteCommand = new DeleteIndexCommand(targetIndex);
+        String expected = DeleteIndexCommand.class.getCanonicalName() + "{targetIndex=" + targetIndex + "}";
+        assertEquals(expected, deleteCommand.toString());
+    }
+
+    @Test
+    public void toStringMethodDeleteName() {
+        Name targetName = new Name("targetName");
+        DeleteNameCommand deleteCommand = new DeleteNameCommand(targetName);
+        String expected = DeleteNameCommand.class.getCanonicalName() + "{targetName=" + targetName + "}";
         assertEquals(expected, deleteCommand.toString());
     }
 

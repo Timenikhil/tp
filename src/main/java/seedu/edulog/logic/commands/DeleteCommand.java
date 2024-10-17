@@ -15,7 +15,7 @@ public abstract class DeleteCommand extends Command {
     public static final String MESSAGE_USAGE = COMMAND_WORD
         + ": Deletes the student identified by the index number or name used in the displayed student list.\n"
         + "Parameters: INDEX (must be a positive integer)\n"
-        + "OR NAME (case-insensitive)\n"
+        + "OR NAME (case-sensitive)\n"
         + "Example: " + COMMAND_WORD + " 1\n"
         + "OR " + COMMAND_WORD + " John Doe";
 
