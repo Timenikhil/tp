@@ -15,7 +15,7 @@ You can reach us at the email `seer[at]comp.nus.edu.sg`
 
 <img src="images/timenikhil.png" width="200px">
 
-[[LinkedIn](www.linkedin.com/in/nikhil-sultania)]
+[[LinkedIn](https:/www.linkedin.com/in/nikhil-sultania)]
 [[github](https://github.com/Timenikhil)]
 [[portfolio](team/timenikhil.md)]
 
