@@ -87,6 +87,7 @@
     },
     {
       "src": "Documentation.md",
+      "title": "Documentation guide",
       "headings": {
         "documentation-guide": "Documentation Guide"
       },
